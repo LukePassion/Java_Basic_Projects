@@ -1,0 +1,38 @@
+package sistemaoperacional;
+import java.util.Date;
+import java.util.Locale;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+public class SistemaOperacional {
+    
+    public static void main(String[] args) {
+        System.out.print("Informações do sistema operacional:");
+        Date data = new Date();
+      //Obtem a data e hora do sistema operacional
+        
+        System.out.print("A Data e Hora do sistema são:");
+        System.out.print(data.toString());
+   
+        Locale sistemaLocal = Locale.getDefault();
+      //Obtem o objeto Locale representando as configurações regionais
+       
+        String idioma = sistemaLocal.getLanguage();
+      // Obtem o código do idioma
+       
+        System.out.print("O Idioma do sistema:" + idioma);
+       
+      //Obtem a resolução da tela
+
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        
+        Dimension dimensaoTela = toolkit.getScreenSize();
+        
+        int larguraTela = dimensaoTela.width;
+        int alturaTela = dimensaoTela.height;
+        
+        System.out.print("A Resolução da Tela:" + larguraTela + "x" + alturaTela);
+        
+    }
+    
+}
