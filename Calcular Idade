@@ -1,0 +1,19 @@
+              package classes;
+
+/**
+ *
+ * @author LUCAS
+ */
+public class telaidade extends javax.swing.JFrame {
+
+    /**
+     * Creates new form telaidade
+     */
+    public telaidade() {
+        initComponents();
+    }   
+private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        int ano = Integer.parseInt(txtAN.getValue().toString());
+        int idade = 2024 - ano;
+        lblIdade.setText(Integer.toString(idade));
